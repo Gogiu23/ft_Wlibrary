@@ -1,0 +1,101 @@
+:root {
+  --card-height: 40vw;
+  --card-margin: 4vw;
+  --card-top-offset: 1em;
+  --outline-width: 0px;
+  --cyanPers50: #f0fbfb;
+  --cyanPers100: #d8f1f5;
+  --cyanPers200: #b7e3ea;
+  --cyanPers300: #84cedc;
+  --cyanPers400: #3da7bd;
+  --cyanPers500: #2f94ab;
+  --cyanPers600: #2a7890;
+  --cyanPers700: #286276;
+  --cyanPers800: #285262;
+  --cyanPers900: #264553;
+  --cyanPers950: #142d38;
+  /* color palette cover picture */
+  --darkGreen: #1b2814ff;
+  --blackOlive: #1d220cff;
+  --floralWhite: #fffdf4ff;
+  --vanilla: #feedb9ff;
+  --oldGold: #cbc23aff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(0.25turn, #84cedc, 40%, #286276);
+}
+
+.spaceBetween {
+  min-height: 100vh;
+}
+
+#card_1 {
+  --index: 1;
+}
+#card_2 {
+  --index: 2;
+}
+#card_3 {
+  --index: 3;
+}
+#card_4 {
+  --index: 4;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cards .cardsContainer {
+  border: 2px solid black;
+  background-color: var(--vanilla);
+  max-width: 50vw;
+  max-height: 40vh;
+  display: flex;
+  position: sticky;
+  top: 10%; /* bloqueado arriba hasta que lleguen los otros divs */
+  margin: 50px; /*deja margen entre cada bloque */
+  transform-origin: 50% 0;
+  will-change: transform;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-timeline: --image;
+  animation-range: entry 1% cover 30%;
+  animation-fill-mode: both;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.linkDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}

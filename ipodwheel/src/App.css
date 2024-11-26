@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: rgb(51, 51, 51);
+  background: linear-gradient(
+    180deg,
+    rgba(51, 51, 51, 1) 45%,
+    rgba(0, 123, 255, 1) 100%
+  );
+  font-family: Arial, sans-serif;
+}
+
+#ipodBox {
+  width: 90vw;
+  background: rgb(245, 245, 245);
+  background: -moz-linear-gradient(
+    171deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(98, 98, 98, 1) 0%
+  );
+  background: -webkit-linear-gradient(
+    171deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(98, 98, 98, 1) 0%
+  );
+  background: linear-gradient(
+    171deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(98, 98, 98, 1) 0%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5f5f5",endColorstr="#626262",GradientType=1);
+  max-width: 686px;
+  height: 90vh;
+  border: 2px solid #333333;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  justify-items: center;
+  border-radius: 8px;
+}
+
+.screen {
+  width: 90%;
+  margin-top: 30px;
+  border-radius: 8px;
+  background: #333;
+  height: 50%;
+  border: 2px solid red;
+}
+
+#circle {
+  width: 25%;
+  height: 43%;
+  border: 150px solid #007bff;
+  border-radius: 50%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #0084ff, #006fe6);
+  box-shadow:
+    12px 12px 24px #004a99,
+    -12px -12px 24px #00acff;
+  transform: translateY(-35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(98, 98, 98, 1);
+  position: relative;
+  touch-action: none;
+}
+
+@media (max-width: 400px) {
+  #circle {
+    width: 115px;
+    height: 115px;
+    border: 86px solid #007bff;
+  }
+}
+
+#number {
+  font-size: 2rem;
+  color: #007bff;
+  user-select: none;
+}
