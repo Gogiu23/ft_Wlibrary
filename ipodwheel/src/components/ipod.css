@@ -1,0 +1,60 @@
+@import "../App.css";
+.ipod {
+  display: grid;
+  grid-template-areas:
+    "screenIpod"
+    "wheel";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.78fr 1fr;
+  border: 2px solid #333;
+  background: var(--blue);
+  height: 100%;
+  margin: auto;
+  width: 333px;
+  max-width: 333px;
+  height: 716px;
+  max-height: 716px;
+  border-radius: 8px;
+}
+.screenIpod {
+  background: #fff;
+  border-radius: 4px;
+  width: 307px;
+  height: 422px;
+  margin: auto;
+  border: 4px solid #333;
+  grid-area: screenIpod;
+}
+.wheel {
+  grid-area: wheel;
+  /*border: 4px solid blueviolet;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#circle {
+  background: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 85px;
+  border-radius: 50%;
+  touch-action: none;
+}
+
+/*@media (max-width: 400px) {*/
+/*  #circle {*/
+/*    width: 115px;*/
+/*    height: 115px;*/
+/*    border: 86px solid #007bff;*/
+/*  }*/
+/*}*/
+
+#number {
+  font-size: 2rem;
+  color: aquamarine;
+  user-select: none;
+}
